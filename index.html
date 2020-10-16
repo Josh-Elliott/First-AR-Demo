@@ -13,11 +13,20 @@
         
         <a-scene embedded arjs='sourceType: webcam;'>
             
-            <a-box position='0 0.5 0' color='blue'></a-box>
+            <a-marker-camera preset='hiro'>
             
-            <a-text value="What you \n sayin Jasmin" color="white" position="0 1.2 0" align="center"></a-text>
+             <a-box position='0 0.5 0' color='blue'>
+                 <a-animation attribute="rotation"
+                             dur="3000"
+                             to="360 360 0"
+                             repeat="indefinite"
+                             easing="linear">
+                 </a-animation>  
+              </a-box>
             
-            <a-marker-camera preset='hiro'></a-marker-camera>
+              <a-text value="Spin my \n cube" color="white" position="0 1.2 0" align="center"></a-text>
+            
+            </a-marker-camera>
             
         </a-scene>
         
